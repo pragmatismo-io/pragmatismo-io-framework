@@ -145,7 +145,7 @@ var UrlJoin = require("url-join");
     console.log(`Sentiment request for: ${phrase}`);
 
     const { sentiment } = require("cogserv-text-analytics")({
-      key: '071c0948f26e4301bd567bdf389612ca' 
+      key: process.env.TEXT_KEY
     });
 
     sentiment(documents, (err, res) => {
