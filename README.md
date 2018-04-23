@@ -1,1 +1,4 @@
-Pragmatismo.io - common classes.
+﻿pragmatismo.io - Framework (Node)
+http://pragmatismo.io
+
+Licenciado sob MIT License.
