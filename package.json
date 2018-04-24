@@ -1,5 +1,5 @@
-	{
-  "version": "1.0.3", 
+{
+  "version": "1.0.4",
   "main": "./Node/dist/index.js",
   "types": "./Node/dist/index.d.ts",
   "name": "pragmatismo-io-framework",
@@ -10,6 +10,8 @@
   },
   "license": "MIT",
   "dependencies": {
+    "azure-search": "0.0.20",
+    "cogserv-text-analytics": "^0.3.2",
     "sequelize-typescript": "^0.6.3",
     "url-join": "^4.0.0"
   }
