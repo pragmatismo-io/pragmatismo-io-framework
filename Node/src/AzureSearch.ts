@@ -61,12 +61,35 @@ export class AzureSearch {
     );
   }
 
-  rebuildIndex(cb: any) {
-    this.client.deleteIndex(this.searchIndex, (err) =>{
-      this.client.deleteIndexer(this.searchIndexer, (err) =>{
-        if (err){ console.log(err);}
+  deleteIndex(cb: any) {
+    this.client.deleteIndex(this.searchIndex, (err) => {
+      this.client.deleteIndexer(this.searchIndexer, (err) => {
+        if (err) { console.log(err); }
         cb(null, err);
-    });});
-      
+      });
+    });
+  }
+
+  /** Creates an index in Azure search. */
+  createIndex(schema, dataSourceName, cb: any) {
+    let _this = this;
+    this.client.createIndex(schema, (err, schemaReturned)=> {
+      let schemaIndexer = {
+        name: _this.searchIndexer,
+        dataSourceName: dataSourceName,
+        targetIndexName: this.searchIndex,
+        parameters: {
+          'maxFailedItems': 10,
+          'maxFailedItemsPerBatch': 5,
+          'base64EncodeKeys': false,
+          'batchSize': 500
+        }
+      };
+
+      this.client.createIndexer(schemaIndexer, function (err, schemaIndexerReturned) {
+        cb(schemaIndexerReturned, err);
+      });
+    });
   }
 }
+
