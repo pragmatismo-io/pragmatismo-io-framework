@@ -1,13 +1,2 @@
-node_modules
-/server/.env
-/ui/npm-debug.log
-server/npm-debug.log
-/server/dist
-/ui/build
-/deploy/default.gbui/build
-/dist
-/guaribas.sqlite
-/guaribas.log
-/work
-/docs
-/Node/dist
+Node/node_modules
+Node/dist

@@ -1,7 +1,7 @@
 {
   "mode": "modules",
   "out": "docs",
-  "name": "General Bots Open Core",
+  "name": "Pragmatismo.io - Framework",
   "theme": "default",
   "ignoreCompilerErrors": "true",
   "experimentalDecorators": "true",
