@@ -72,10 +72,10 @@ export class AzureSearch {
 
   /** Creates an index in Azure search. */
   createIndex(schema, dataSourceName, cb: any) {
-    let _this = this;
+    let _this_ = this;
     this.client.createIndex(schema, (err, schemaReturned)=> {
       let schemaIndexer = {
-        name: _this.searchIndexer,
+        name: _this_.searchIndexer,
         dataSourceName: dataSourceName,
         targetIndexName: this.searchIndex,
         parameters: {
