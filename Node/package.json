@@ -12,7 +12,7 @@
   "dependencies": {
     "azure-search": "0.0.20",
     "cogserv-text-analytics": "^0.3.2",
-    "sequelize-typescript": "^0.6.4",
+    "sequelize-typescript": "^0.6.5",
     "url-join": "^4.0.0"
   }
 }
