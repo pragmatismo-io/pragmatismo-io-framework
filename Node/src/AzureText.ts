@@ -31,31 +31,30 @@
 | WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.             |
 |                                                                             |
 \*****************************************************************************/
- 
- "use strict";
- 
-import { Length } from 'sequelize-typescript';
+
+"use strict";
+
 var UrlJoin = require("url-join");
- 
- export class AzureText {
-   static getSpelledText(
-     key: string,
-     text: string,
-     cb: any
-    ) {
-      "use strict";
-      
-      let https = require("https");
-      
-      let host = "api.cognitive.microsoft.com";
-      let path = "/bing/v7.0/spellcheck";
-      
-      let mkt = "pt-PT";
-      let mode = "spell";
-      let query_string = "?mkt=" + mkt + "&mode=" + mode;
-      
-      let request_params = {
-        method: "POST",
+
+export class AzureText {
+  static getSpelledText(
+    key: string,
+    text: string,
+    cb: any
+  ) {
+    "use strict";
+
+    let https = require("https");
+
+    let host = "api.cognitive.microsoft.com";
+    let path = "/bing/v7.0/spellcheck";
+
+    let mkt = "pt-PT";
+    let mode = "spell";
+    let query_string = "?mkt=" + mkt + "&mode=" + mode;
+
+    let request_params = {
+      method: "POST",
       hostname: host,
       path: path + query_string,
       headers: {
@@ -68,13 +67,12 @@ var UrlJoin = require("url-join");
     let getCorrectedText = (sourceText: string, response: any) => {
 
 
-      let getWordIndexByWordOffsetInText = function(text, wordOffsetInText) {
-        let index =0;
+      let getWordIndexByWordOffsetInText = function (text, wordOffsetInText) {
+        let index = 0;
         let currentWordIndex = 0;
         text = text.split(" ");
-        text.forEach(element=>{
-          if (index >= wordOffsetInText)
-          {
+        text.forEach(element => {
+          if (index >= wordOffsetInText) {
             return false;
           }
           index += element.length + 1;
@@ -82,35 +80,35 @@ var UrlJoin = require("url-join");
         });
         return currentWordIndex;
       };
-      let replaceWordAtIndex = function(text, index, replacement) {
+      let replaceWordAtIndex = function (text, index, replacement) {
         text = text.split(" ");
         text[index] = replacement;
         text = text.join(" ");
         return text;
       };
 
-      
+
       // IMPROVE ACCURACY.
       let index = 0;
-      if (response.flaggedTokens){
-      response.flaggedTokens.forEach(element => {
-        index = getWordIndexByWordOffsetInText(sourceText, element.offset);
-        sourceText = replaceWordAtIndex(sourceText, index, element.suggestions[0].suggestion);
-        index++;
-      });
-    }
+      if (response.flaggedTokens) {
+        response.flaggedTokens.forEach(element => {
+          index = getWordIndexByWordOffsetInText(sourceText, element.offset);
+          sourceText = replaceWordAtIndex(sourceText, index, element.suggestions[0].suggestion);
+          index++;
+        });
+      }
       return sourceText;
     };
 
-    let response_handler = function(response) {
+    let response_handler = function (response) {
       let body = "";
-      response.on("data", function(d) {
+      response.on("data", function (d) {
         body += d;
       });
-      response.on("end", function() {
-        cb( getCorrectedText(text, JSON.parse(body)), null);
+      response.on("end", function () {
+        cb(getCorrectedText(text, JSON.parse(body)), null);
       });
-      response.on("error", function(e) {
+      response.on("error", function (e) {
         cb(null, e.message);
       });
     };
