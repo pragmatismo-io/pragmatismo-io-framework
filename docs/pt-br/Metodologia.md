@@ -384,6 +384,9 @@ Até breve, Haroldo.
 8.  Em reuniões, priorizar o ingresso pelo Comunicador Padrão, sempre ingressar
     com a conta da Companhia.
 
+Notas:
+	Inscrever-se em: https://calendar.help
+	
 Modelo:
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -633,6 +636,11 @@ OverdueDate = @OverdueDate, OverdueValue = @OverdueValue WHERE
     }
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+#### 6.2.3.2 Transação com Sequelize
+
+https://stackoverflow.com/questions/42870374/node-js-7-how-to-use-sequelize-transaction-with-async-await
+
+
 ### 6.2.3. Ciência de Dados
 
 ### 6.2.3.1. Azure Spark SQL vs U-SQL
@@ -695,8 +703,10 @@ https://github.com/Azure/mmlspark
 | Referência de Ids do BotFramework                                          | https://docs.microsoft.com/en-us/bot-framework/resources-identifiers-guide                                                    |
 | Transferring chat to a human agent using Microsoft Bot Framework           | https://ankitbko.github.io/2017/03/human-handover-bot/                                                                        |
 | Whatsapp #1 																 | https://chat-api.com/en/demo.html |
-| Whatsapp #1 																 |  |
-
+| Pagamentos  																 | https://docs.microsoft.com/en-us/azure/bot-service/nodejs/bot-builder-nodejs-request-payment?view=azure-bot-service-3.0 |
+| A collection of useful extensions for Bot Builder v4 | https://github.com/Stevenic/botbuilder-toybox |
+| Microsoft Cognitive Services Labs                                          | https://labs.cognitive.microsoft.com/ | 
+| Alexa Skills															     | https://www.amazon.com/alexa-skills/b/ref=sd_allcat_ods_ha_con_skills_st?ie=UTF8&node=13727921011
 
 
 6.4.1 General Bots Plataforma
