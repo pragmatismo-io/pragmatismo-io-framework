@@ -47,17 +47,17 @@ de projetos de tecnologia.
 1.2 Referências
 ---------------
 
-1.2.1.  http://msdn.microsoft.com
+1.2.1.  http://msdn.microsoft.com 
 
-2.  https://aws.amazon.com/documentation/
+1.2.2.  https://aws.amazon.com/documentation/
 
-3.  http://msdn.microsoft.com
+1.2.3.  http://msdn.microsoft.com
 
-4.  http://wikipedia.org
+1.2.4.  http://wikipedia.org
 
-5.  https://portal.fiocruz.br/
+1.2.5.  https://portal.fiocruz.br/
 
-6.  http://www.trt02.gov.br
+1.2.6.  http://www.trt02.gov.br
 
 1.3 Segurança
 -------------
