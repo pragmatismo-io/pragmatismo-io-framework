@@ -1,3 +1,8 @@
+Pragmatismo.io Methodology
+
+Copyright (c) Pragmatismo.io. All rights reserved.                          
+Licensed under the MIT license                                              
+
 
 6. Ferramentas
 ==============
