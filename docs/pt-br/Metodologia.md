@@ -988,6 +988,11 @@ https://ngrok.com/download
 
 #### 6.8.2.5. Instalação de pacotes node globais
 
+### 6.8.3  SharePoint
+
+| Title               | URL                                             |
+| SharePoint Fantastics WebParts | https://github.com/OlivierCC/spfx-40-fantastics |
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 npm install -g nodemon
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
