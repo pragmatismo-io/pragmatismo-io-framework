@@ -1,6 +1,6 @@
 {
   "name": "pragmatismo-io-framework",
-  "version": "1.0.14",
+  "version": "1.0.15",
   "description": "Anything reusable turned into classes.",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -15,13 +15,13 @@
     "url": "https://github.com/pragmatismo-io/pragmatismo-io-framework.git"
   },
   "dependencies": {
-    "azure-search": "^0.0.20",
+    "azure-search": "^0.0.21",
     "cogserv-text-analytics": "^0.3.2",
     "url-join": "^4.0.0"
   },
   "devDependencies": {
     "@types/url-join": "^0.8.2",
     "typedoc": "^0.11.1",
-    "typescript": "^2.8.3"
+    "typescript": "^2.9.2"
   }
 }

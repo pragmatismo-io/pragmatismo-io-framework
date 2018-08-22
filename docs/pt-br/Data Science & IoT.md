@@ -93,9 +93,8 @@ https://stackoverflow.com/questions/42870374/node-js-7-how-to-use-sequelize-tran
 
 https://stackoverflow.com/questions/35575080/azure-spark-sql-vs-u-sql
 
-### 6.2.3.2. Image Similarity using Microsoft CNTK
-
-https://github.com/Azure/ImageSimilarityUsingCntk
+| Image Similarity using Microsoft CNTK | https://github.com/Azure/ImageSimilarityUsingCntk |
+| VoTT: Visual Object Tagging Tool      | https://github.com/Microsoft/VoTT                 |
 
 ### 6.2.3.3. Microsoft Machine Learning for Apache Spark
 
