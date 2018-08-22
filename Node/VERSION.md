@@ -1,5 +1,9 @@
 # History
 
+## Version 1.0.15
+
+- FIX: Updated dependencies versions.
+
 ## Version 1.0.14
 
 - FIX: README.md and VERSION.md updated.
