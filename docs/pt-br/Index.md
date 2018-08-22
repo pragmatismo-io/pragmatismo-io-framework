@@ -132,3 +132,17 @@ http://pt.wikipedia.org \| http://en.wikipedia.org
 5.  Antes de responder a clientes e fornecedores, verifique se a mensagem
     trafegada inflige algum item da metodologia e regras de acordos de
     confidencialidade que esteja envolvido.
+
+	
+1.2 Primeiros Passos
+====================
+	
+## Edição (requer conta GitHub)
+https://github.com/pragmatismo-io/pragmatismo-io-framework/blob/master/docs/pt-br/
+
+##Metodologia Publicada
+https://pragmatismo-io.github.io/pragmatismo-io-framework/
+
+
+
+

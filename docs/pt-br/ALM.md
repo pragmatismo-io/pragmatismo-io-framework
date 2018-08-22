@@ -57,6 +57,17 @@ Como trafegar informações pelo fluxo de questões e usar o campo Disussion.
 
 Wiki Como visualizar a Wiki do projeto e contribuir com informações e Atas.
 
+
+#### 3.1.1.2 Criando um Perfil de Navegador por cliente.
+
+1. No canto superior do navegador, clique no nome de seu usuário(a);
+2. Em seguida, Gerenciar Pessoas;
+3. Clique em Adicionar;
+4. Digite o nome do Perfil e clique em Salvar;
+5. Pronto.
+
+
+
 3.2 Cliente
 -----------
 
