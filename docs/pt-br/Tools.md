@@ -43,3 +43,15 @@ Licensed under the MIT license
 | Login IBM                                 | https://idaas.iam.ibm.com                                                          |
 | Storyboard creator 						| https://www.storyboardthat.com/storyboard-creator 								 |
 | Wapplyzer									| https://wappalyzer.com/ 															 |
+
+
+
+6.2 Editors
+
+6.2.1 Notepad++
+
+6.2.1.1 Plugins
+
+| Título                                    | Endereço                                                                           |
+|-------------------------------------------|------------------------------------------------------------------------------------|
+| Plugin Manager                            | 																					 |
