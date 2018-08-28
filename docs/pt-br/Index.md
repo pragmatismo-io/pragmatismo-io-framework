@@ -137,12 +137,10 @@ http://pt.wikipedia.org \| http://en.wikipedia.org
 1.2 Primeiros Passos
 ====================
 	
-## Edição (requer conta GitHub)
+## Para editar, contribuindo com ajustes (requer conta GitHub)
 https://github.com/pragmatismo-io/pragmatismo-io-framework/blob/master/docs/pt-br/
 
-##Metodologia Publicada
+## Para acessar a metodologia após submissão do código.
 https://pragmatismo-io.github.io/pragmatismo-io-framework/
-
-
 
 

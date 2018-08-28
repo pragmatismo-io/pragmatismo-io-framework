@@ -134,7 +134,17 @@ palavras que descrevem a Ação da pessoa. Ex.: ReiniciarSenha.
 https://github.com/Microsoft/BotBuilder-Samples/tree/master/Node/demo-ContosoFlowers
 
 
-Microsoft Bot Framework Links
+## 6.5 Procedimentos
+
+### 6.5.1 Adicionando .gbapp, .gbkb, etc dentro de um .gbai como submodule Git
+
+git submodule add https://github.com/pragmatismo-io/ProjectBot.gbkb
+git submodule update --init --recursive
+
+
+
+## 6.6 Microsoft Bot Framework Links
+
 https://www.npmjs.com/package/botbuilder-topical
 https://github.com/Stevenic/botbuilder-toybox
 https://github.com/ritazh/botframework-hipchatchannel
@@ -146,6 +156,3 @@ https://www.npmjs.com/package/botbuilder-unit
 https://www.npmjs.com/package/botbuilder-notifications 
 https://www.npmjs.com/package/bot-handoff 
 https://www.npmjs.com/package/botfarm
-
-
-

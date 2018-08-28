@@ -6,13 +6,22 @@ Licensed under the MIT license
 10 Artes
 ========
 
-10.1 Microsoft Fluent Design
-----------------------------
+10.1 Animation
+--------------
 
-https://www.youtube.com/watch?v=vcBGj4R7Fo0
+| Title | Address | 
+| Adobe Character Examples | https://forums.adobe.com/message/9463006#9463006 |
+
+
+10.2. UI
+--------
+
+| Title | Address |
+| Microsoft Fluent Design | https://www.youtube.com/watch?v=vcBGj4R7Fo0 |  
 
 10.2 Vocal
 ----------
 
 Acesse o site da parceira Cintia Scola http://cantocintiascola.blogspot.com.br
 para conhecer mais sobre técnicas da voz.
+
