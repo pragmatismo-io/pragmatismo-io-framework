@@ -21,7 +21,7 @@
   },
   "devDependencies": {
     "@types/url-join": "^0.8.2",
-    "typedoc": "^0.11.1",
-    "typescript": "^2.9.2"
+    "typedoc": "^0.12.0",
+    "typescript": "^3.0.3"
   }
 }
