@@ -19,3 +19,10 @@ Licensed under the MIT license
 | ORM 																			| http://docs.sequelizejs.com/manual/tutorial/associations.html
 | Migração de .NET para JavaScript (Node.js)									| https://www.reddit.com/r/webdev/comments/2val7s/as_a_net_developer_do_i_need_to_care_about_nodejs |
 | Simplified JavaScript Jargon 													| http://jargon.js.org |
+
+8.1.2 Packages
+
+| Título | Descrição                                                            | URL |
+|--------|---------------------------------------------------------------------|-----------------|
+| MSAL | Microsoft Authentication Library | https://www.npmjs.com/package/msal|
+

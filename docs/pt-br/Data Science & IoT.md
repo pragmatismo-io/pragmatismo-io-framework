@@ -89,6 +89,11 @@ https://stackoverflow.com/questions/42870374/node-js-7-how-to-use-sequelize-tran
 
 ### 6.2.3. Ciência de Dados
 
+| Title | URL | Description |
+|-----|-----|------|
+| Visual Object Tagging Tool | https://github.com/Microsoft/VoTT | An electron app for building end to end Object Detection Models from Images and Videos.
+
+
 ### 6.2.3.1. Azure Spark SQL vs U-SQL
 
 https://stackoverflow.com/questions/35575080/azure-spark-sql-vs-u-sql
