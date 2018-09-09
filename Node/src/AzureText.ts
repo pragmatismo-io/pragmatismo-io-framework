@@ -42,89 +42,89 @@ export class AzureText {
     text: string,
     cb: any
   ) {
-    "use strict";
+    return new Promise(
+      (resolve, reject) => {
 
-    let https = require("https");
+        let https = require("https");
 
-    let host = "api.cognitive.microsoft.com";
-    let path = "/bing/v7.0/spellcheck";
+        let host = "api.cognitive.microsoft.com";
+        let path = "/bing/v7.0/spellcheck";
 
-    let mkt = "pt-PT";
-    let mode = "spell";
-    let query_string = "?mkt=" + mkt + "&mode=" + mode;
+        let mkt = "pt-PT";
+        let mode = "spell";
+        let query_string = "?mkt=" + mkt + "&mode=" + mode;
 
-    let request_params = {
-      method: "POST",
-      hostname: host,
-      path: path + query_string,
-      headers: {
-        "Content-Type": "application/x-www-form-urlencoded",
-        "Content-Length": text.length + 5,
-        "Ocp-Apim-Subscription-Key": key
-      }
-    };
-
-    let getCorrectedText = (sourceText: string, response: any) => {
-
-
-      let getWordIndexByWordOffsetInText = function (text, wordOffsetInText) {
-        let index = 0;
-        let currentWordIndex = 0;
-        text = text.split(" ");
-        text.forEach(element => {
-          if (index >= wordOffsetInText) {
-            return false;
+        let request_params = {
+          method: "POST",
+          hostname: host,
+          path: path + query_string,
+          headers: {
+            "Content-Type": "application/x-www-form-urlencoded",
+            "Content-Length": text.length + 5,
+            "Ocp-Apim-Subscription-Key": key
           }
-          index += element.length + 1;
-          currentWordIndex++;
-        });
-        return currentWordIndex;
-      };
-      let replaceWordAtIndex = function (text, index, replacement) {
-        text = text.split(" ");
-        text[index] = replacement;
-        text = text.join(" ");
-        return text;
-      };
+        };
+
+        let getCorrectedText = (sourceText: string, response: any) => {
 
 
-      // IMPROVE ACCURACY.
-      let index = 0;
-      if (response.flaggedTokens) {
-        response.flaggedTokens.forEach(element => {
-          index = getWordIndexByWordOffsetInText(sourceText, element.offset);
-          sourceText = replaceWordAtIndex(sourceText, index, element.suggestions[0].suggestion);
-          index++;
-        });
-      }
-      return sourceText;
-    };
+          let getWordIndexByWordOffsetInText = function (text, wordOffsetInText) {
+            let index = 0;
+            let currentWordIndex = 0;
+            text = text.split(" ");
+            text.forEach(element => {
+              if (index >= wordOffsetInText) {
+                return false;
+              }
+              index += element.length + 1;
+              currentWordIndex++;
+            });
+            return currentWordIndex;
+          };
+          let replaceWordAtIndex = function (text, index, replacement) {
+            text = text.split(" ");
+            text[index] = replacement;
+            text = text.join(" ");
+            return text;
+          };
 
-    let response_handler = function (response) {
-      let body = "";
-      response.on("data", function (d) {
-        body += d;
+          let index = 0;
+          if (response.flaggedTokens) {
+            response.flaggedTokens.forEach(element => {
+              index = getWordIndexByWordOffsetInText(sourceText, element.offset);
+              sourceText = replaceWordAtIndex(sourceText, index, element.suggestions[0].suggestion);
+              index++;
+            });
+          }
+          return sourceText;
+        };
+
+        let response_handler = function (response) {
+          let body = "";
+          response.on("data", function (d) {
+            body += d;
+          });
+          response.on("end", function () {
+            resolve(getCorrectedText(text, JSON.parse(body)));
+          });
+          response.on("error", function (e) {
+            reject(e.message);
+          });
+        };
+        let req = https.request(request_params, response_handler);
+        req.write("text=" + text);
+        req.end();
       });
-      response.on("end", function () {
-        cb(getCorrectedText(text, JSON.parse(body)), null);
-      });
-      response.on("error", function (e) {
-        cb(null, e.message);
-      });
-    };
-    let req = https.request(request_params, response_handler);
-    req.write("text=" + text);
-    req.end();
   }
 
   static isIntentYes(utterance) {
     return utterance.match(
-      /^(sim|s|positivo|afirmativo|claro|evidente|sem dÃºvida)/i
+      /^(sim|s|positivo|afirmativo|claro|evidente|sem dúvida)/i
     );
   }
 
   static isIntentNo(utterance) {
-    return utterance.match(/^(nÃ£o|nao|n|esse nÃ£o|nenhum.*)/i);
+    return utterance.match(/^(não|nao|n|esse não|nenhum.*)/i);
   }
 
   static isNumeric(n) {
@@ -132,67 +132,72 @@ export class AzureText {
   }
 
   static getSentiment(key, phrase, cb) {
-    const documents = [
-      {
-        id: "1",
-        language: "pt",
-        text: phrase
-      }
-    ];
+        const documents = [
+          {
+            id: "1",
+            language: language,
+            text: phrase
+          }
+        ];
 
-    console.log(`Sentiment request for: ${phrase}`);
+        console.log(`Sentiment request for: ${phrase}`);
 
-    const { sentiment } = require("cogserv-text-analytics")({
-      key: process.env.TEXT_KEY
-    });
+        const { sentiment } = require("cogserv-text-analytics")({
+          key: process.env.TEXT_KEY
+        });
 
-    sentiment(documents, (err, res) => {
-      if (!err) {
-        var result = JSON.parse(res);
-        console.log(`Sentiment results: ${result.documents[0].score}`);
-        cb(null, result.documents[0].score);
-      } else {
-        console.log(`Sentiment error: ${err}`);
-        cb(err, null);
-      }
-    });
-  }
-
-  getKeywords(key: string, phrase: string, cb: any) {
-    const documents = [
-      {
-        id: "1",
-        language: "pt",
-        text: phrase
-      }
-    ];
-
-    const { keyPhrases } = require("cogserv-text-analytics")({
-      key: key
-    });
-
-    keyPhrases(documents)
-      .then(res => JSON.parse(res))
-      .then(res => {
-        console.log(res.documents);
-        cb(null, res);
-      })
-
-      .catch(err => {
-        console.log(`Sentiment error: ${err}`);
-        cb(err, null);
-      });
-
-    keyPhrases(documents)
-      .then(res => JSON.parse(res))
-      .then(res => {
-        console.log(res.documents);
-        cb(null, res);
-      })
-
-      .catch(err => {
-        console.log(`Sentiment error: ${err}`);
-        cb(err, null);
+        sentiment(documents, (err, res) => {
+          if (!err) {
+            var result = JSON.parse(res);
+            console.log(`Sentiment results: ${result.documents[0].score}`);
+            resolve(result.documents[0].score);
+          } else {
+            console.log(`Sentiment error: ${err}`);
+            reject(err);
+          }
+        });
       });
   }
-}
+
+  getKeywords(key: string, language: string, phrase: string) {
+    return new Promise(
+      (resolve, reject) => {
+
+        const documents = [
+          {
+            id: "1",
+            language: language,
+            text: phrase
+          }
+        ];
+
+        const { keyPhrases } = require("cogserv-text-analytics")({
+          key: key
+        });
+
+        keyPhrases(documents)
+          .then(res => JSON.parse(res))
+          .then(res => {
+            console.log(res.documents);
+            resolve(res);
+          })
+
+          .catch(err => {
+            console.log(`Sentiment error: ${err}`);
+            reject(err);
+          });
+
+        keyPhrases(documents)
+          .then(res => JSON.parse(res))
+          .then(res => {
+            console.log(res.documents);
+            resolve(res);
+          })
+
+          .catch(err => {
+            console.log(`Sentiment error: ${err}`);
+            reject(err);
+          });
+      });
+    }
+  }

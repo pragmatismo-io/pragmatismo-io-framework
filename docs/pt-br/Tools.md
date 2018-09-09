@@ -50,9 +50,12 @@ Licensed under the MIT license
 
 6.2.1 Notepad++
 
+6.2.1.1 Como substituir múltiplas linhas ao mesmo tempo
+
+![Video](https://raw.githubusercontent.com/pragmatismo-io/pragmatismo-io-framework/media/how-to-use-global-substituter-in-notepad-plus-plus-and-tool-bucket.gif)
+
 6.2.1.1 Plugins
 
 | Título                                    | Endereço                                                                           |
 |-------------------------------------------|------------------------------------------------------------------------------------|
-| Plugin Manager                            | 																					 |
-
+| Plugin Manager                            | https://github.com/bruderstein/nppPluginManager/releases							 |

@@ -49,47 +49,82 @@ export class AzureSearch {
     });
   }
 
-  search(queryText: string, callback: any, top = 1000) {
-    this.client.search(
-      this.searchIndex,
-      {
-        search: queryText,
-        queryType: "simple",
-        searchMode: "any"
-      },
-      callback
-    );
+  search(queryText: string, top = 1000) {
+    return new Promise <any>(
+      (resolve, reject) => {
+        this.client.search(
+          this.searchIndex,
+          {
+            search: queryText,
+            queryType: "simple",
+            searchMode: "any"
+          },
+          (err, results) => {
+            if (err) {
+              reject(err);
+            }
+            else {
+              resolve(results);
+            }
+          });
+      });
   }
 
-  deleteIndex(cb: any) {
-    this.client.deleteIndex(this.searchIndex, (err) => {
-      this.client.deleteIndexer(this.searchIndexer, (err) => {
-        if (err) { console.log(err); }
-        cb(null, err);
+  deleteIndex() {
+    return new Promise(
+      (resolve, reject) => {
+        this.client.deleteIndex(this.searchIndex, (err) => {
+          if (err) {
+            reject(err);
+          }
+          else {
+            this.client.deleteIndexer(this.searchIndexer, (err) => {
+              if (err) {
+                reject(err);
+              }
+              else {
+                resolve();
+              }
+            });
+          }
+        });
       });
-    });
   }
 
   /** Creates an index in Azure search. */
-  createIndex(schema, dataSourceName, cb: any) {
+  createIndex(schema, dataSourceName) {
     let _this_ = this;
-    this.client.createIndex(schema, (err, schemaReturned)=> {
-      let schemaIndexer = {
-        name: _this_.searchIndexer,
-        dataSourceName: dataSourceName,
-        targetIndexName: this.searchIndex,
-        parameters: {
-          'maxFailedItems': 10,
-          'maxFailedItemsPerBatch': 5,
-          'base64EncodeKeys': false,
-          'batchSize': 500
-        }
-      };
+    return new Promise(
+      (resolve, reject) => {
+        this.client.createIndex(schema, (err, schemaReturned) => {
+          if (err) {
+            reject(err);
+          }
+          else {
+            let schemaIndexer = {
+              name: _this_.searchIndexer,
+              dataSourceName: dataSourceName,
+              targetIndexName: this.searchIndex,
+              parameters: {
+                'maxFailedItems': 10,
+                'maxFailedItemsPerBatch': 5,
+                'base64EncodeKeys': false,
+                'batchSize': 500
+              }
+            };
 
-      this.client.createIndexer(schemaIndexer, function (err, schemaIndexerReturned) {
-        cb(schemaIndexerReturned, err);
+            this.client.createIndexer(schemaIndexer, function (err, results) {
+              if (err) {
+                reject(err);
+              }
+              else {
+                resolve(results);
+              }
+            });
+          }
+        });
       });
-    });
   }
 }
+
 
