@@ -34,15 +34,15 @@
 
 "use strict";
 
-var UrlJoin = require("url-join");
+const textAnalytics = require("cogserv-text-analytics")
 
 export class AzureText {
-  static getSpelledText(
+
+  static async getSpelledText(
     key: string,
-    text: string,
-    cb: any
-  ) {
-    return new Promise(
+    text: string
+  ): Promise<string> {
+    return new Promise<string>(
       (resolve, reject) => {
 
         let https = require("https");
@@ -66,7 +66,6 @@ export class AzureText {
         };
 
         let getCorrectedText = (sourceText: string, response: any) => {
-
 
           let getWordIndexByWordOffsetInText = function (text, wordOffsetInText) {
             let index = 0;
@@ -119,44 +118,36 @@ export class AzureText {
 
   static isIntentYes(utterance) {
     return utterance.match(
-      /^(sim|s|positivo|afirmativo|claro|evidente|sem d˙vida)/i
+      /^(sim|s|positivo|afirmativo|claro|evidente|sem d√∫vida)/i
     );
   }
 
   static isIntentNo(utterance) {
-    return utterance.match(/^(n„o|nao|n|esse n„o|nenhum.*)/i);
+    return utterance.match(/^(n√£o|nao|n|esse n√£o|nenhum.*)/i);
   }
 
   static isNumeric(n) {
     return !isNaN(parseFloat(n)) && isFinite(n);
   }
 
-  static getSentiment(key, phrase, cb) {
-        const documents = [
-          {
-            id: "1",
-            language: language,
-            text: phrase
-          }
-        ];
+  static async getSentiment(key: string, language: string, text: string):
+    Promise<number> {
+    const documents = [
+      {
+        id: "1",
+        language: language,
+        text: text
+      }
+    ];
+    const { sentiment } = textAnalytics({ key: key });
 
-        console.log(`Sentiment request for: ${phrase}`);
-
-        const { sentiment } = require("cogserv-text-analytics")({
-          key: process.env.TEXT_KEY
-        });
-
-        sentiment(documents, (err, res) => {
-          if (!err) {
-            var result = JSON.parse(res);
-            console.log(`Sentiment results: ${result.documents[0].score}`);
-            resolve(result.documents[0].score);
-          } else {
-            console.log(`Sentiment error: ${err}`);
-            reject(err);
-          }
-        });
-      });
+    try {
+      let response = await sentiment(documents);
+      var result = JSON.parse(response);
+      return Promise.resolve(result.documents[0].score);
+    } catch (reason) {
+      return Promise.reject(reason);
+    }
   }
 
   getKeywords(key: string, language: string, phrase: string) {
@@ -171,9 +162,7 @@ export class AzureText {
           }
         ];
 
-        const { keyPhrases } = require("cogserv-text-analytics")({
-          key: key
-        });
+        const { keyPhrases } = textAnalytics({ key: key });
 
         keyPhrases(documents)
           .then(res => JSON.parse(res))
@@ -199,5 +188,5 @@ export class AzureText {
             reject(err);
           });
       });
-    }
   }
+}
