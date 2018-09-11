@@ -34,19 +34,19 @@
 
 
 export class AzureSearch {
-  client: any;
-  searchKey: string;
-  searchIndex: string;
-  searchIndexer: string;
+  client: any
+  searchKey: string
+  searchIndex: string
+  searchIndexer: string
 
   constructor(searchKey: string, searchHost: string, searchIndex: string, searchIndexer: string) {
-    this.searchKey = searchKey;
-    this.searchIndex = searchIndex;
-    this.searchIndexer = searchIndexer;
+    this.searchKey = searchKey
+    this.searchIndex = searchIndex
+    this.searchIndexer = searchIndexer
     this.client = require("azure-search")({
       url: "https://" + searchHost,
       key: searchKey
-    });
+    })
   }
 
   search(queryText: string, top = 1000) {
@@ -61,13 +61,13 @@ export class AzureSearch {
           },
           (err, results) => {
             if (err) {
-              reject(err);
+              reject(err)
             }
             else {
-              resolve(results);
+              resolve(results)
             }
-          });
-      });
+          })
+      })
   }
 
   deleteIndex() {
@@ -75,30 +75,30 @@ export class AzureSearch {
       (resolve, reject) => {
         this.client.deleteIndex(this.searchIndex, (err) => {
           if (err) {
-            reject(err);
+            reject(err)
           }
           else {
             this.client.deleteIndexer(this.searchIndexer, (err) => {
               if (err) {
-                reject(err);
+                reject(err)
               }
               else {
-                resolve();
+                resolve()
               }
-            });
+            })
           }
-        });
-      });
+        })
+      })
   }
 
   /** Creates an index in Azure search. */
   createIndex(schema, dataSourceName) {
-    let _this_ = this;
+    let _this_ = this
     return new Promise(
       (resolve, reject) => {
         this.client.createIndex(schema, (err, schemaReturned) => {
           if (err) {
-            reject(err);
+            reject(err)
           }
           else {
             let schemaIndexer = {
@@ -111,19 +111,19 @@ export class AzureSearch {
                 'base64EncodeKeys': false,
                 'batchSize': 500
               }
-            };
+            }
 
             this.client.createIndexer(schemaIndexer, function (err, results) {
               if (err) {
-                reject(err);
+                reject(err)
               }
               else {
-                resolve(results);
+                resolve(results)
               }
-            });
+            })
           }
-        });
-      });
+        })
+      })
   }
 }
 

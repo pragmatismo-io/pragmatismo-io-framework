@@ -33,7 +33,7 @@
 |                                                                             |
 \*****************************************************************************/
 
-"use strict";
+"use strict"
 
-export { AzureText } from './AzureText';
-export { AzureSearch } from './AzureSearch';
+export { AzureText } from './AzureText'
+export { AzureSearch } from './AzureSearch'

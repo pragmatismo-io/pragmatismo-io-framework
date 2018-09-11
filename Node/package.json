@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "azure-search": "^0.0.21",
-    "cogserv-text-analytics": "^0.3.2",
+    "ms-rest-azure": "^2.5.7",
     "url-join": "^4.0.0"
   },
   "devDependencies": {
