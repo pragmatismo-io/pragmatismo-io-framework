@@ -32,178 +32,197 @@
 |                                                                             |
 \*****************************************************************************/
 
-"use strict"
+"use strict";
 
-const textAnalytics = require("azure-cognitiveservices-textanalytics")
-const CognitiveServicesCredentials = require('ms-rest-azure').CognitiveServicesCredentials
+const textAnalytics = require("azure-cognitiveservices-textanalytics");
+const CognitiveServicesCredentials = require("ms-rest-azure")
+  .CognitiveServicesCredentials;
+import { Inputs } from "./Strings";
 
 export class AzureText {
+  static async getSpelledText(key: string, text: string): Promise<string> {
+    return new Promise<string>((resolve, reject) => {
+      let https = require("https");
 
-  static async getSpelledText(
-    key: string,
-    text: string
-  ): Promise<string> {
-    return new Promise<string>(
-      (resolve, reject) => {
+      let host = "api.cognitive.microsoft.com";
+      let path = "/bing/v7.0/spellcheck";
 
-        let https = require("https")
+      let mkt = "pt-PT";
+      let mode = "spell";
+      let query_string = "?mkt=" + mkt + "&mode=" + mode;
 
-        let host = "api.cognitive.microsoft.com"
-        let path = "/bing/v7.0/spellcheck"
-
-        let mkt = "pt-PT"
-        let mode = "spell"
-        let query_string = "?mkt=" + mkt + "&mode=" + mode
-
-        let request_params = {
-          method: "POST",
-          hostname: host,
-          path: path + query_string,
-          headers: {
-            "Content-Type": "application/x-www-form-urlencoded",
-            "Content-Length": text.length + 5,
-            "Ocp-Apim-Subscription-Key": key
-          }
+      let request_params = {
+        method: "POST",
+        hostname: host,
+        path: path + query_string,
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+          "Content-Length": text.length + 5,
+          "Ocp-Apim-Subscription-Key": key
         }
+      };
 
-        let getCorrectedText = (sourceText: string, response: any) => {
+      let getCorrectedText = (sourceText: string, response: any) => {
+        let getWordIndexByWordOffsetInText = function(text, wordOffsetInText) {
+          let index = 0;
+          let currentWordIndex = 0;
+          text = text.split(" ");
+          text.forEach(element => {
+            if (index >= wordOffsetInText) {
+              return false;
+            }
+            index += element.length + 1;
+            currentWordIndex++;
+          });
+          return currentWordIndex;
+        };
+        let replaceWordAtIndex = function(text, index, replacement) {
+          text = text.split(" ");
+          text[index] = replacement;
+          text = text.join(" ");
+          return text;
+        };
 
-          let getWordIndexByWordOffsetInText = function (text, wordOffsetInText) {
-            let index = 0
-            let currentWordIndex = 0
-            text = text.split(" ")
-            text.forEach(element => {
-              if (index >= wordOffsetInText) {
-                return false
-              }
-              index += element.length + 1
-              currentWordIndex++
-            })
-            return currentWordIndex
-          }
-          let replaceWordAtIndex = function (text, index, replacement) {
-            text = text.split(" ")
-            text[index] = replacement
-            text = text.join(" ")
-            return text
-          }
-
-          let index = 0
-          if (response.flaggedTokens) {
-            response.flaggedTokens.forEach(element => {
-              index = getWordIndexByWordOffsetInText(sourceText, element.offset)
-              sourceText = replaceWordAtIndex(sourceText, index, element.suggestions[0].suggestion)
-              index++
-            })
-          }
-          return sourceText
+        let index = 0;
+        if (response.flaggedTokens) {
+          response.flaggedTokens.forEach(element => {
+            index = getWordIndexByWordOffsetInText(sourceText, element.offset);
+            sourceText = replaceWordAtIndex(
+              sourceText,
+              index,
+              element.suggestions[0].suggestion
+            );
+            index++;
+          });
         }
+        return sourceText;
+      };
 
-        let response_handler = (response) => {
-          let body = ""
-          response.on("data", (d) => {
-            body += d
-          })
-          response.on("end", () => {
-            resolve(getCorrectedText(text, JSON.parse(body)))
-          })
-          response.on("error", (e) => {
-            reject(`Error calling Spelling API: ${e}`)
-
-          })
-        }
-        let req = https.request(request_params, response_handler)
-        req.write("text=" + text)
-        req.end()
-      })
+      let response_handler = response => {
+        let body = "";
+        response.on("data", d => {
+          body += d;
+        });
+        response.on("end", () => {
+          resolve(getCorrectedText(text, JSON.parse(body)));
+        });
+        response.on("error", e => {
+          reject(`Error calling Spelling API: ${e}`);
+        });
+      };
+      let req = https.request(request_params, response_handler);
+      req.write("text=" + text);
+      req.end();
+    });
   }
 
-  static isIntentYes(utterance) {
-    return utterance.match(
-      /^(sim|s|positivo|afirmativo|claro|evidente|sem dúvida)/i
-    )
+  static isIntentYes(locale, utterance) {
+    return utterance.match(Inputs[locale].affirmative_sentences);
   }
 
-  static isIntentNo(utterance) {
-    return utterance.match(/^(não|nao|n|esse não|nenhum.*)/i)
+  static isIntentNo(locale, utterance) {
+    return utterance.match(Inputs[locale].negative_sentences);
   }
 
   static isNumeric(n) {
-    return !isNaN(parseFloat(n)) && isFinite(n)
+    return !isNaN(parseFloat(n)) && isFinite(n);
   }
 
-  static async getSentiment(key: string, endPoint: string, language: string, text: string):
-    Promise<number> {
+  static async getSentiment(
+    key: string,
+    endPoint: string,
+    language: string,
+    text: string
+  ): Promise<number> {
+    let credentials = new CognitiveServicesCredentials(key);
+    let client = new textAnalytics(credentials, endPoint);
 
-    let credentials = new CognitiveServicesCredentials(key)
-    let client = new textAnalytics(credentials, endPoint)
-
-    // Hacks based on https://docs.microsoft.com/en-us/azure/cognitive-services/text-analytics/overview 
+    // Hacks based on https://docs.microsoft.com/en-us/azure/cognitive-services/text-analytics/overview
 
     if (language === "pt-br") {
-      language = "pt-PT"
+      language = "pt-PT";
     }
 
     let input = {
-      documents: [{
-        id: "1",
-        language: language,
-        text: text
-      }
+      documents: [
+        {
+          id: "1",
+          language: language,
+          text: text
+        }
       ]
-    }
+    };
 
     try {
-      let response = await client.sentiment(input)
+      let response = await client.sentiment(input);
       if (response.errors.length > 0) {
-        return Promise.reject(`Error calling Sentiment API, first error(total: ${response.errors.length}): ${response.errors[0].message}`)
+        return Promise.reject(
+          `Error calling Sentiment API, first error(total: ${
+            response.errors.length
+          }): ${response.errors[0].message}`
+        );
       }
-      return Promise.resolve(response.documents[0].score)
+      return Promise.resolve(response.documents[0].score);
     } catch (reason) {
-      return Promise.reject(`Error calling Sentiment API: ${reason}`)
+      return Promise.reject(`Error calling Sentiment API: ${reason}`);
     }
   }
 
-  static async getKeywords(key: string, endPoint: string, language: string, text: string): Promise<any> {
-
-    let credentials = new CognitiveServicesCredentials(key)
-    let client = new textAnalytics(credentials, endPoint)
-
+  static async getKeywords(
+    key: string,
+    endPoint: string,
+    language: string,
+    text: string
+  ): Promise<any> {
+    let credentials = new CognitiveServicesCredentials(key);
+    let client = new textAnalytics(credentials, endPoint);
 
     let input = {
-      documents: [{
-        id: "1",
-        language: language,
-        text: text
-      }
+      documents: [
+        {
+          id: "1",
+          language: language,
+          text: text
+        }
       ]
-    }
+    };
 
     try {
-      let response = await client.keyPhrases(input)
-      return Promise.resolve(response.documents[0])
+      let response = await client.keyPhrases(input);
+      return Promise.resolve(response.documents[0]);
     } catch (reason) {
-      return Promise.reject(`Error calling KeyPhrase Extraction API: ${reason}`)
+      return Promise.reject(
+        `Error calling KeyPhrase Extraction API: ${reason}`
+      );
     }
   }
 
-  static async getLocale(key: string, endPoint: string, text: string): Promise<any> {
-
-    let credentials = new CognitiveServicesCredentials(key)
-    let client = new textAnalytics(credentials, endPoint)
+  static async getLocale(
+    key: string,
+    endPoint: string,
+    text: string
+  ): Promise<any> {
+    let credentials = new CognitiveServicesCredentials(key);
+    let client = new textAnalytics(credentials, endPoint);
 
     let input = {
-      documents: [{
-        id: "1",
-        text: text
-      }]
-    }
+      documents: [
+        {
+          id: "1",
+          text: text
+        }
+      ]
+    };
 
     try {
-      let response = await client.detectLanguage(input)
-      return Promise.resolve(response.documents[0].detectedLanguages[0].iso6391Name)
+      let response = await client.detectLanguage(input);
+      return Promise.resolve(
+        response.documents[0].detectedLanguages[0].iso6391Name
+      );
     } catch (reason) {
-      return Promise.reject(`Error calling KeyPhrase Extraction API: ${reason}`)
+      return Promise.reject(
+        `Error calling KeyPhrase Extraction API: ${reason}`
+      );
     }
   }
 }
