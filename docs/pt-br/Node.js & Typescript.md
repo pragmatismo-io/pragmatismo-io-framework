@@ -4,7 +4,7 @@ Copyright (c) Pragmatismo.io. All rights reserved.
 Licensed under the MIT license                                              
 
 
-### 8.1.1. JavaScript
+### JavaScript
 
 | Título | Endereço                                                            |
 |--------|---------------------------------------------------------------------|
@@ -20,9 +20,18 @@ Licensed under the MIT license
 | Migração de .NET para JavaScript (Node.js)									| https://www.reddit.com/r/webdev/comments/2val7s/as_a_net_developer_do_i_need_to_care_about_nodejs |
 | Simplified JavaScript Jargon 													| http://jargon.js.org |
 
-8.1.2 Packages
+### Packages
 
 | Título | Descrição                                                            | URL |
 |--------|---------------------------------------------------------------------|-----------------|
 | MSAL | Microsoft Authentication Library | https://www.npmjs.com/package/msal|
 
+
+### Visual Studio Code Extensions
+
+
+| Title | Description | 
+| ------|-------------|
+| mbinic.tgit-cmds | Set of commands for launching TortoiseGit dialogs |
+| tomashubelbauer.vscode-markdown-table-format | Formats MarkDown tables so that all columns have the same width |
+| esbenp.prettier-vscode | VS Code plugin for prettier/prettier (wraps at column 80) |
