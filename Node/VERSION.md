@@ -1,5 +1,9 @@
 # History
 
+## Version 1.0.18
+
+- NEW: Support for creation of datasources in Azure Search.
+
 ## Version 1.0.17
 
 - FIX: Updated dependencies versions.

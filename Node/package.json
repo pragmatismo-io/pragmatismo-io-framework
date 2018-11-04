@@ -1,7 +1,7 @@
 {
   "name": "pragmatismo-io-framework",
-  "version": "1.0.17",
-  "description": "Anything reusable turned into classes.",
+  "version": "1.0.18",
+  "description": "Anything reusable turned into typed classes.",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "homepage": "https://github.com/pragmatismo-io/pragmatismo-io-framework",

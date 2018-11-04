@@ -40,7 +40,6 @@ using Pragmatismo.Io.Framework.Services;
 
 #endregion
 
-// TODO: Localization
 namespace Pragmatismo.Io.Framework.Bots
 {
     [Serializable]
