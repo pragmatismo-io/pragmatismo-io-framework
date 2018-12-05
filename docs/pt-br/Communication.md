@@ -30,6 +30,12 @@ Licensed under the MIT license
 6.  Não encaminhe e-mails internos diretamente para cliente, opte por reatar a
     linha de e-mail correspondente ao assunto para responder, ou iniciar uma
     nova conversa.
+    
+7.  Opte por agradecer a pessoa antecipadamente ou quando encontrá-la pessoalmente
+    a enviar um e'-mail de obrigado' apenas. Dentro de uma filosofia de caixa de 
+    entrada  vazia, e-mails são documentos processados em sequência 
+    e itens desta natureza podem fazer crescer consideravelmente a quantidade 
+    de trabalho.
 
 ### 5.2.2. Despedida e Assinatura do E-mail
 
