@@ -144,7 +144,7 @@ export class AzureSearch {
           let schemaIndexer = {
             name: _this_.searchIndexer,
             dataSourceName: dataSourceName,
-            targetIndexName: this.searchIndex,
+            targetIndexName: _this_.searchIndex,
             parameters: {
               maxFailedItems: 10,
               maxFailedItemsPerBatch: 5,
