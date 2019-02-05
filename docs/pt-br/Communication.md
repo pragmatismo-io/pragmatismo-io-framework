@@ -36,6 +36,10 @@ Licensed under the MIT license
     entrada  vazia, e-mails são documentos processados em sequência 
     e itens desta natureza podem fazer crescer consideravelmente a quantidade 
     de trabalho.
+8.  Apenas defina o e-mail com Alta Prioridade (Ícone de Exclamação) se for realmente
+    um caso de urgência.
+9.  Ao realizar perguntas opte por usar apenas um ponto de interrogação, que já evidencia
+    questionamento.
 
 ### 5.2.2. Despedida e Assinatura do E-mail
 
