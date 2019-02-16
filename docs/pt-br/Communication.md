@@ -48,7 +48,7 @@ extras, apenas o nome como no ex.:
 
 Até breve, Haroldo.
 
-### 5.2.3. Agendamento de Reunião
+### 5.2.3. Reuniões
 
 1.  Acrescentar EscritorioDeProjetos\@pragmatismo.io como destinatário opcional
     em todos os convites enviados a cliente;
