@@ -73,6 +73,11 @@ Até breve, Haroldo.
 
 8.  Em reuniões, priorizar o ingresso pelo Comunicador Padrão, sempre ingressar
     com a conta da Companhia.
+9.  Opte por ingressar 05 minutos antes em reuniões. Estabeleça globalmente um 
+    tolerância a seu próprio atraso de 5min. para estar na reunião, avisando
+    com antecedência em caso de imprevisto. Tolere os atrasos não mais que o
+    tempo hábil da reunião sem prejudicar sua qualidade, ou de acordo com
+    sua disponibilidade - sugerindo remarcação em caso de comprometimento.
 
 Notas:
 	Inscrever-se em: https://calendar.help
