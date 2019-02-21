@@ -16,7 +16,7 @@ Licensed under the MIT license
     texto encontra-se coerente com o restante da mensagem e assinatura.
 
 3.  Evite e-mails longos e procure acrescentar uma frase final onde a pessoa que
-    está lendo tenha condições de tomar decisões com a mensagem rapidamente.
+    está lendo tenha condições de tomar decisões com a mensagem rapidamente. Realizar procedimento automático de correçao ortográfica e verificar o adequado uso de pausas e pontuações promovendo um nivel formal de escrita que conduza à compreensão imediata, sem necessidade de releituras.
 
 4.  Opte por rascunhar informações diretamente na ferramentas associadas como
     por exemplo o Team Services, trafegando apenas o hyperlink do item em
