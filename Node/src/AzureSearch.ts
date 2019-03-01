@@ -74,7 +74,7 @@ export class AzureSearch {
   }
 
   deleteIndex() {
-    return new Promise((resolve, reject) => {
+    return new Promise((resolve: any, reject: any): any => {
       this.client.deleteIndex(this.searchIndex, err => {
         if (err) {
           reject(err);
@@ -92,7 +92,7 @@ export class AzureSearch {
   }
 
   deleteDataSource(name: string) {
-    return new Promise((resolve, reject) => {
+    return new Promise((resolve: any, reject: any): any => {
       this.client.deleteDataSource(name, err => {
         if (err) {
           reject(err);
@@ -122,7 +122,7 @@ export class AzureSearch {
       container: { name: tableName }
     };
 
-    return new Promise((resolve, reject) => {
+    return new Promise((resolve: any, reject: any): any => {
       this.client.createDataSource(ds, err => {
         if (err) {
           reject(err);
@@ -136,7 +136,7 @@ export class AzureSearch {
   /** Creates an index in Azure search. */
   createIndex(schema, dataSourceName) {
     let _this_ = this;
-    return new Promise((resolve, reject) => {
+    return new Promise((resolve: any, reject: any): any => {
       this.client.createIndex(schema, (err, schemaReturned) => {
         if (err) {
           reject(err);

@@ -16,7 +16,7 @@ Licensed under the MIT license
     texto encontra-se coerente com o restante da mensagem e assinatura.
 
 3.  Evite e-mails longos e procure acrescentar uma frase final onde a pessoa que
-    está lendo tenha condições de tomar decisões com a mensagem rapidamente.
+    está lendo tenha condições de tomar decisões com a mensagem rapidamente. Realizar procedimento automático de correçao ortográfica e verificar o adequado uso de pausas e pontuações promovendo um nivel formal de escrita que conduza à compreensão imediata, sem necessidade de releituras.
 
 4.  Opte por rascunhar informações diretamente na ferramentas associadas como
     por exemplo o Team Services, trafegando apenas o hyperlink do item em
@@ -30,6 +30,16 @@ Licensed under the MIT license
 6.  Não encaminhe e-mails internos diretamente para cliente, opte por reatar a
     linha de e-mail correspondente ao assunto para responder, ou iniciar uma
     nova conversa.
+    
+7.  Opte por agradecer a pessoa antecipadamente ou quando encontrá-la pessoalmente
+    a enviar um e'-mail de obrigado' apenas. Dentro de uma filosofia de caixa de 
+    entrada  vazia, e-mails são documentos processados em sequência 
+    e itens desta natureza podem fazer crescer consideravelmente a quantidade 
+    de trabalho.
+8.  Apenas defina o e-mail com Alta Prioridade (Ícone de Exclamação) se for realmente
+    um caso de urgência.
+9.  Ao realizar perguntas opte por usar apenas um ponto de interrogação, que já evidencia
+    questionamento.
 
 ### 5.2.2. Despedida e Assinatura do E-mail
 
@@ -38,7 +48,7 @@ extras, apenas o nome como no ex.:
 
 Até breve, Haroldo.
 
-### 5.2.3. Agendamento de Reunião
+### 5.2.3. Reuniões
 
 1.  Acrescentar EscritorioDeProjetos\@pragmatismo.io como destinatário opcional
     em todos os convites enviados a cliente;
@@ -63,6 +73,11 @@ Até breve, Haroldo.
 
 8.  Em reuniões, priorizar o ingresso pelo Comunicador Padrão, sempre ingressar
     com a conta da Companhia.
+9.  Opte por ingressar 05 minutos antes em reuniões. Estabeleça globalmente um 
+    tolerância a seu próprio atraso de 5min. para estar na reunião, avisando
+    com antecedência em caso de imprevisto. Tolere os atrasos não mais que o
+    tempo hábil da reunião sem prejudicar sua qualidade, ou de acordo com
+    sua disponibilidade - sugerindo remarcação em caso de comprometimento.
 
 Notas:
 	Inscrever-se em: https://calendar.help

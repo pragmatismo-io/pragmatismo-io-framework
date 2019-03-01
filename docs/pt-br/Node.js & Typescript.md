@@ -35,3 +35,4 @@ Licensed under the MIT license
 | mbinic.tgit-cmds | Set of commands for launching TortoiseGit dialogs |
 | tomashubelbauer.vscode-markdown-table-format | Formats MarkDown tables so that all columns have the same width |
 | esbenp.prettier-vscode | VS Code plugin for prettier/prettier (wraps at column 80) |
+| mikestead.dotenv | .env support |
