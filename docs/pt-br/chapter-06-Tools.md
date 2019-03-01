@@ -1,14 +1,7 @@
-Pragmatismo.io Methodology
+# Tools
 
-Copyright (c) Pragmatismo.io. All rights reserved.                          
-Licensed under the MIT license                                              
+## WebApps Gerais
 
-
-6. Ferramentas
-==============
-
-6.1. WebApps Gerais
--------------------
 
 | Título                                    | Endereço                                                                           |
 |-------------------------------------------|------------------------------------------------------------------------------------|
@@ -21,7 +14,6 @@ Licensed under the MIT license
 | Speech to Text as A Service               | https://speechlogger.appspot.com/en/                                               |
 | Remove One List From Another              | http://alphabetizer.flap.tv/remove-one-list-from-another.php                       |
 | Códigos ASCII                             | http://www.theasciicode.com.ar/ascii-printable-characters/slash-ascii-code-47.html |
-|                                           | http://www.coffeelint.org/                                                         |
 |                                           | http://www.cssfontstack.com/                                                       |
 |                                           | http://dnsquery.org/                                                               |
 |                                           | http://ipaddress.com/ip-tools/                                                     |
@@ -36,26 +28,12 @@ Licensed under the MIT license
 |                                           | http://regexr.com/                                                                 |
 |                                           | https://www.talktyper.com/                                                         |
 |                                           | http://play.typeracer.com/                                                         |
-|                                           | http://editor.swagger.io/\#/                                                       |
 |                                           | http://www.hemingwayapp.com/​                                                       |
-|                                           | https://portal.azure.com                                                           |
-|                                           | https://portal.office.com                                                          |
-| Login IBM                                 | https://idaas.iam.ibm.com                                                          |
 | Storyboard creator 						| https://www.storyboardthat.com/storyboard-creator 								 |
 | Wapplyzer									| https://wappalyzer.com/ 															 |
 | Snip Insights								| https://github.com/Microsoft/ailab/releases/tag/1.0.0.0 							 |
 
 
-6.2 Editors
-
-6.2.1 Notepad++
-
-6.2.1.1 Como substituir múltiplas linhas ao mesmo tempo
-
-![Video](https://raw.githubusercontent.com/pragmatismo-io/pragmatismo-io-framework/media/how-to-use-global-substituter-in-notepad-plus-plus-and-tool-bucket.gif)
-
-6.2.1.1 Plugins
-
-| Título                                    | Endereço                                                                           |
-|-------------------------------------------|------------------------------------------------------------------------------------|
-| Plugin Manager                            | https://github.com/bruderstein/nppPluginManager/releases							 |
+|Ferramentas| Description |
+|-------------|------------|
+| Notepad++ | Como substituir múltiplas linhas ao mesmo tempo | ![Video](https://raw.githubusercontent.com/pragmatismo-io/pragmatismo-io-framework/media/how-to-use-global-substituter-in-notepad-plus-plus-and-tool-bucket.gif) |
