@@ -1,6 +1,7 @@
-﻿pragmatismo.io - Framework (Node)
-http://pragmatismo.io
+#pragmatismo.io - Framework
+
+[Metodologia (pt-br)](https://github.com/pragmatismo-io/pragmatismo-io-framework/tree/master/docs/pt-br)
+
+
 
 Licensed under a MIT License.
-
-1. [Pragmatismo.io Methodology](https://pragmatismo-io.github.io/pragmatismo-io-framework)
