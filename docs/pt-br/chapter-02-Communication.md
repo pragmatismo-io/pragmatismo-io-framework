@@ -40,6 +40,8 @@ Licensed under the MIT license
     um caso de urgência.
 9.  Ao realizar perguntas opte por usar apenas um ponto de interrogação, que já evidencia
     questionamento.
+10. Ao comentar sobre a execução de uma atividade em andamento, envie um prazo estimado
+    de conclusão, minimizando a chance da questão precisar ser formulada.
 
 ### 5.2.2. Despedida e Assinatura do E-mail
 
