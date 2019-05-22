@@ -42,6 +42,8 @@ Licensed under the MIT license
     questionamento.
 10. Ao comentar sobre a execução de uma atividade em andamento, envie um prazo estimado
     de conclusão, minimizando a chance da questão precisar ser formulada.
+11. O uso de anexos por e-mail deve ser minimizado, optando pelo uso do Portal, ALM, ou ferramenta 
+    associada.
 
 ### 5.2.2. Despedida e Assinatura do E-mail
 
