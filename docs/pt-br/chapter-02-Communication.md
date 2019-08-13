@@ -42,7 +42,7 @@ Licensed under the MIT license
     questionamento.
 10. Ao comentar sobre a execução de uma atividade em andamento, envie um prazo estimado
     de conclusão, minimizando a chance da questão precisar ser formulada.
-11. O uso de anexos por e-mail deve ser minimizado, optando pelo uso do Portal, ALM, ou ferramenta 
+11. O uso de anexos por e-mail deve ser evitado, optando pelo uso do Portal, ALM, ou ferramenta 
     associada.
 
 ### 5.2.2. Despedida e Assinatura do E-mail
@@ -76,12 +76,15 @@ Até breve, Haroldo.
 7.  Envie o convite com o mesmo modelo de e-mail, incluindo assinatura;
 
 8.  Em reuniões, priorizar o ingresso pelo Comunicador Padrão, sempre ingressar
-    com a conta da Companhia.
+    com a conta da Companhia;
+    
 9.  Opte por ingressar 05 minutos antes em reuniões. Estabeleça globalmente um 
     tolerância a seu próprio atraso de 5min. para estar na reunião, avisando
     com antecedência em caso de imprevisto. Tolere os atrasos não mais que o
     tempo hábil da reunião sem prejudicar sua qualidade, ou de acordo com
     sua disponibilidade - sugerindo remarcação em caso de comprometimento.
+10. Não use Opcional em convites, consulte previamente as pessoas antes de
+    enviar apenas para quem realmente participará da reunião.
 
 Notas:
 	Inscrever-se em: https://calendar.help
