@@ -47,10 +47,15 @@ Licensed under the MIT license
 
 ### 5.2.2. Despedida e Assinatura do E-mail
 
-Mantenha a despedida e assinaturas o mais sucintas possível - sem dados pessoais
+Mantenha a despedida e assinaturas o mais sucintas possível.
+Use uma versão de cartão, provida pela área de desenho ou a versão sem dados pessoais
 extras, apenas o nome como no ex.:
 
+```
 Até breve, Haroldo.
+```
+
+Nota: Remova todas as ofertas padrão do seu dispositivo como 'Obter Programa para Serviço'.
 
 ### 5.2.3. Reuniões
 
