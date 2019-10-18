@@ -1,4 +1,3 @@
-
 /*****************************************************************************\
 |                                               ( )_  _                       |
 |    _ _    _ __   _ _    __    ___ ___     _ _ | ,_)(_)  ___   ___     _     |
@@ -33,8 +32,12 @@
 |                                                                             |
 \*****************************************************************************/
 
-"use strict"
+"use strict";
 
-export { AzureText } from './AzureText'
-export { AzureSearch } from './AzureSearch'
-export { CollectionUtil } from './CollectionUtil'
+export class CollectionUtil {
+  public static async asyncForEach(array, callback) {
+    for (let index = 0; index < array.length; index++) {
+      await callback(array[index], index, array);
+    }
+  }
+}
