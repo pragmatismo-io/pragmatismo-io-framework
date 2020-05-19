@@ -221,7 +221,7 @@ export class AzureText {
       );
     } catch (reason) {
       return Promise.reject(
-        `Error calling KeyPhrase Extraction API: ${reason}`
+        `Error calling Language Detection API: ${reason}`
       );
     }
   }
