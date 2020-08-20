@@ -44,6 +44,8 @@ Licensed under the MIT license
     de conclusão, minimizando a chance da questão precisar ser formulada.
 11. O uso de anexos por e-mail deve ser evitado, optando pelo uso do Portal, ALM, ou ferramenta 
     associada.
+12. Opte por atualizar a documentação e responder com o link da última edição mostrando a quem perguntou
+    a resposta da dúvida na forma de inserção de texto(s) na documentação destino.
 
 ### 5.2.2. Despedida e Assinatura do E-mail
 
