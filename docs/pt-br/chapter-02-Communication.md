@@ -92,7 +92,12 @@ Nota: Remova todas as ofertas padrão do seu dispositivo como 'Obter Programa pa
     sua disponibilidade - sugerindo remarcação em caso de comprometimento.
 10. Não use Opcional em convites, consulte previamente as pessoas antes de
     enviar apenas para quem realmente participará da reunião.
-
+11. Descreva o assunto da reunião objetivamente e acrescente macro tópicos a serem
+    discutidos. Durante a reunião, discuta os tópicos planejados e mantenha
+    a discussão no contexto do assunto estabelecido.
+12. Para reuniões com equipe, apenas agende a reunião sem necessidade de perguntar
+    sobre a disponibilidade, que está publicada na agenda de cada pessoa.
+    
 Notas:
 	Inscrever-se em: https://calendar.help
 	
