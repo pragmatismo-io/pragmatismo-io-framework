@@ -97,6 +97,8 @@ Nota: Remova todas as ofertas padrão do seu dispositivo como 'Obter Programa pa
     a discussão no contexto do assunto estabelecido.
 12. Para reuniões com equipe, apenas agende a reunião sem necessidade de perguntar
     sobre a disponibilidade, que está publicada na agenda de cada pessoa.
+13. Mesmo para reuniões em equipe planeje com antecedência os horários, certificando-se
+    de não enviar convites para reuniões no mesmo dia ou com menos ao menos 48h de antecedência.
     
 Notas:
 	Inscrever-se em: https://calendar.help
