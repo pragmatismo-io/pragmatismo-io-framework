@@ -154,7 +154,7 @@ intervalo de tempo.
 
 5.  Iniciar a escrita de Requisitos para dar início a fase de Desenho;
 
-6.  Iniciar a escreta de Casos de Testes possíveis atualizando requisitos em
+6.  Iniciar a escrita de Casos de Testes possíveis atualizando requisitos em
     conversas com cliente;
 
 7.  Realizar a apresentação do método de trabalho, tendo algumas questões
