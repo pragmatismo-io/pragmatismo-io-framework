@@ -46,6 +46,9 @@ Licensed under the MIT license
     associada.
 12. Opte por atualizar a documentação e responder com o link da última edição mostrando a quem perguntou
     a resposta da dúvida na forma de inserção de texto(s) na documentação destino.
+13. Ao finalizar uma demanda por e-mail ao qual a pessoa é notificada por outra via, por exemplo, ao
+    atender o pedido de um agendamento que a pessoa receberá o convite de modo automático, 
+    não é necessário responder ao e-mail original, já que a pessoa já estará ciente pelo convite recebido.
 
 ### 5.2.2. Despedida e Assinatura do E-mail
 
