@@ -3,6 +3,15 @@ Pragmatismo.io Methodology
 Copyright (c) Pragmatismo.io. All rights reserved.                          
 Licensed under the MIT license                                              
 
+5.1 Expressão corporativa
+---------------------------------------
+
+### 5.1.1. Definições gerais.
+
+1. Leia sobre a comunicação do código de conduta: https://github.com/GeneralBots/BotServer/blob/master/CODE_OF_CONDUCT.md
+2. OK maiúsculo é mais fácil para visualizar o aceite.
+	
+
 5.2. E-mail
 -----------
 
