@@ -53,7 +53,8 @@ defeitos, riscos, revisões, requisições de mudança.
 
 Fluxo de Questões
 
-Como trafegar informações pelo fluxo de questões e usar o campo Disussion.
+Como trafegar informações pelo fluxo de questões e usar o campo Disussion
+mantendo o Description como o campo mais atualizado.
 
 Wiki Como visualizar a Wiki do projeto e contribuir com informações e Atas.
 
