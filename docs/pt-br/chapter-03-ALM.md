@@ -247,6 +247,22 @@ intervalo de tempo.
 2. Usar o Team System da Pragmatismo.io até o cliente ter uma conta própria
 3. Cadastrar apenas Requisitos e Código-fonte, para facilitar transferência
 
+9.3. Tratamento de Defeitos
+--------------------------
+
+### 9.3.1 Desenvolvimento 
+
+1. Uma notificação do ALM é recebida;
+2. O exame do item de trabalho é realizado destinado a definir o Defeito como sendo um item de trabalho itenrno, através da classificação como Ativo, ao cálculo do esforço em horas para a resolução;
+3. Verifique se o relato do erro contém informações suficientes para a análise, do contrário, solicite tais informações de volta e finalize este ciclo; 
+4. Determinar se o defeito é originado da plataforma ou da aplicação;
+5. Através do texto contido no Log, encontre a possível localização do problema no código-fonte.
+	
+Notas
+* Os defeitos devem conter o Log emitido pela aplicação, caso a aplicação não esteja disponibilizando informações sucifientemente, é necessário que uma alteração seja realizada para a melhoria do Log;
+* Informações visuais como cor, podem ser adicionadas ao Log de modo a facilitar a leitura de modo complementar.
+* Capturas de telas devem ser acompanhadas dos Log textuais relativas ao mesmo momento da captura
+
 
 7. Documentação
 ===============
