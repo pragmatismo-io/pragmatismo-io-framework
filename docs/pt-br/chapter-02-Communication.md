@@ -58,6 +58,8 @@ Licensed under the MIT license
 13. Ao finalizar uma demanda por e-mail ao qual a pessoa é notificada por outra via, por exemplo, ao
     atender o pedido de um agendamento que a pessoa receberá o convite de modo automático, 
     não é necessário responder ao e-mail original, já que a pessoa já estará ciente pelo convite recebido.
+14. Mantenha a linha de e-mail inalterada ao responder, optando por duplicar o conteúdo e realizar
+    as inserções na mensagem sendo composta.
 
 ### 5.2.2. Despedida e Assinatura do E-mail
 
