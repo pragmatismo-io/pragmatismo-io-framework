@@ -180,7 +180,7 @@ projeto em questão.
 --------------------------------
 
 A ata deve ser publicada na Wiki do projeto no final de cada reunião para ser
-enviada às/aos participantes com o nome de de Ata_dd_mm_aaaa (ex.:
+enviada às/aos participantes com o nome de Ata_dd_mm_aaaa (ex.:
 Ata_25_01_2017).
 
 ### 5.3.1 Formato da Ata
@@ -191,8 +191,8 @@ Alinhamento dos requisitos e discussão geral sobre usabilidade e arquitetura.
 
 | Item   | Valor                                                                         |
 |--------|-------------------------------------------------------------------------------|
-| Data:  | 25 de Janeiro de 2017                                                         |
-| Hora:  | 15:00                                                                         |
+| Data:  | 25 de janeiro de 2017                                                         |
+| Hora:  | 15:00h                                                                         |
 | Local: | Av. Pres. Castelo Branco, Portão 3 - Maracanã, Rio de Janeiro - RJ, 20271-130 |
 | Vídeo: | [Assistir](http://pragmatismo/video)                                          |
 
