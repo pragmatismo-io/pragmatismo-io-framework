@@ -10,7 +10,7 @@ Licensed under the MIT license
 
 1. Leia sobre a comunicação do código de conduta: https://github.com/GeneralBots/BotServer/blob/master/CODE_OF_CONDUCT.md
 2. OK maiúsculo é mais fácil para visualizar o aceite.
-	
+3. Ao realizar a colagem de conteúdo verifique se uma ferramenta corporativa pode ser usada para armazenar já no local correto e mande apenas o endereço na conversação.	
 
 5.2. E-mail
 -----------
