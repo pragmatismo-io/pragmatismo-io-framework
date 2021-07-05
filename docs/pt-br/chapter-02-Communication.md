@@ -11,6 +11,11 @@ Licensed under the MIT license
 1. Leia sobre a comunicação do código de conduta: https://github.com/GeneralBots/BotServer/blob/master/CODE_OF_CONDUCT.md
 2. OK maiúsculo é mais fácil para visualizar o aceite.
 3. Ao realizar a colagem de conteúdo verifique se uma ferramenta corporativa pode ser usada para armazenar já no local correto e mande apenas o endereço na conversação.	
+4. Ao escrever uma lista de itens, termine cada item com um ponto e vírgula. Termine com um ponto final no último item. 
+	- 3ª feira (06/07) às 11h;
+        - 4ª feira (07/07) às 11h;
+        - 5ª feira (08/07) às 16h.
+   
 
 5.2. E-mail
 -----------
