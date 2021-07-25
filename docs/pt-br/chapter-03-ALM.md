@@ -263,7 +263,7 @@ Notas
 * Os defeitos devem conter o Log emitido pela aplicação, caso a aplicação não esteja disponibilizando informações sucifientemente, é necessário que uma alteração seja realizada para a melhoria do Log;
 * Informações visuais como cor, podem ser adicionadas ao Log de modo a facilitar a leitura de modo complementar.
 * Capturas de telas devem ser acompanhadas dos Log textuais relativas ao mesmo momento da captura
-
+* Caso documentos sejam enviados, uma cópia contendo referências ao ALM deve ser criada e remetida de volta.
 
 7. Documentação
 ===============
