@@ -29,7 +29,8 @@ Licensed under the MIT license
 6.  Apenas inclua as pessoas na linha de conversação, durante a edição de
     questões, tarefas ou requisitos até que estas precisem realmente ter algum
     item de ação atribuída a elas.
-
+    
+7. Escreva o texto do item corporativo de modo disertativo.
 
 3. Papéis
 =========
