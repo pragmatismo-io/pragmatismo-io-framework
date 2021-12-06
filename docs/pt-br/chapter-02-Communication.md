@@ -8,14 +8,14 @@ Licensed under the MIT license
 
 ### 5.1.1. Definições gerais.
 
-1. Leia sobre a comunicação do código de conduta: https://github.com/GeneralBots/BotServer/blob/master/CODE_OF_CONDUCT.md
-2. OK maiúsculo é mais fácil para visualizar o aceite.
-3. Ao realizar a colagem de conteúdo verifique se uma ferramenta corporativa pode ser usada para armazenar já no local correto e mande apenas o endereço na conversação.	
+1. Leia sobre a comunicação do código de conduta: https://github.com/GeneralBots/BotServer/blob/master/CODE_OF_CONDUCT.md;
+2. OK maiúsculo é mais fácil para visualizar o aceite;
+3. Ao realizar a colagem de conteúdo verifique se uma ferramenta corporativa pode ser usada para armazenar já no local correto e mande apenas o endereço na conversação;
 4. Ao escrever uma lista de itens, termine cada item com um ponto e vírgula. Termine com um ponto final no último item. Exemplo:
 	- 3ª feira (06/07) às 11h;
 	- 4ª feira (07/07) às 11h;
 	- 5ª feira (08/07) às 16h.
-   
+5. Numere a lista se facilitar a indexação ou evidência de ordem.
 
 5.2. E-mail
 -----------
@@ -32,7 +32,7 @@ Licensed under the MIT license
 3.  Evite e-mails longos e procure acrescentar uma frase final onde a pessoa que
     está lendo tenha condições de tomar decisões com a mensagem rapidamente. Realizar procedimento automático de correçao ortográfica e verificar o adequado uso de pausas e pontuações promovendo um nivel formal de escrita que conduza à compreensão imediata, sem necessidade de releituras.
 
-4.  Opte por rascunhar informações diretamente na ferramentas associadas como
+4.  Opte por rascunhar in formações diretamente na ferramentas associadas como
     por exemplo o Team Services, trafegando apenas o hyperlink do item em
     questão já criado na ferramenta.
 
@@ -66,15 +66,10 @@ Licensed under the MIT license
 14. Mantenha a linha de e-mail inalterada ao responder, optando por duplicar o conteúdo e realizar
     as inserções na mensagem sendo composta.
 
+
 ### 5.2.2. Despedida e Assinatura do E-mail
 
-Mantenha a despedida e assinaturas o mais sucintas possível.
-Use uma versão de cartão, provida pela área de desenho ou a versão sem dados pessoais
-extras, apenas o nome como no ex.:
-
-```
-Até breve, Haroldo.
-```
+Mantenha a despedida e assinaturas o mais sucintas possível e copie do CEO que é o exemplo padrão.
 
 Nota: Remova todas as ofertas padrão do seu dispositivo como 'Obter Programa para Serviço'.
 
