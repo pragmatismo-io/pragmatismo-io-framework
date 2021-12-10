@@ -16,6 +16,7 @@ Licensed under the MIT license
 	- 4ª feira (07/07) às 11h;
 	- 5ª feira (08/07) às 16h.
 5. Numere a lista se facilitar a indexação ou evidência de ordem.
+6. Opte por inputar a informação diretamente no sistema associado (ex.: XRM, HR, ALM, etc) e não em aplicativos de notas (OneNote, Joplin, etc).
 
 5.2. E-mail
 -----------
@@ -244,3 +245,6 @@ considerado como aceito por todos.
 
 2.  É possível usar um programa como o WinSCP para acessar o FTPS e realizar a
     carga dos arquivos via SFTP.
+
+
+
