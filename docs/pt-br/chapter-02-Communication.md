@@ -69,6 +69,10 @@ Licensed under the MIT license
 14. Mantenha a linha de e-mail inalterada ao responder, optando por duplicar o conteúdo e realizar
     as inserções na mensagem sendo composta.
 
+### Reserva de Local de Trabalho
+
+1. Qualquer pessoa pode reservar seu local de trabalho com uma placa de Não Pertube e contar 
+
 
 ### 5.2.2. Despedida e Assinatura do E-mail
 
