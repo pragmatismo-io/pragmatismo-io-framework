@@ -93,33 +93,29 @@ Nota: Remova todas as ofertas padrão do seu dispositivo como 'Obter Programa pa
 
 4.  Se for uma reunião física, certificar-se de preencher o endereço
     corretamente de modo que o recurso de GPS auxiliar quem está se deslocando;
-
 5.  Em caso de Conferência, envie o convite utilizando a integração do Skype For
     Business (Web, Calendário do Windows ou Outlook Desktop);
-
 6.  Se houver recorrência, descrever no corpo da reunião os tópicos que devem
     ser revistos em cada ocorrência da reunião. Lembre-se que o corpo do convite
     valerá até o fim da última ocorrência com o mesmo texto;
-
 7.  Envie o convite com o mesmo modelo de e-mail, incluindo assinatura;
-
 8.  Em reuniões, priorizar o ingresso pelo Comunicador Padrão, sempre ingressar
-    com a conta da Companhia;
-    
+    com a conta da Companhia;    
 9.  Opte por ingressar 05 minutos antes em reuniões. Estabeleça globalmente um 
     tolerância a seu próprio atraso de 5min. para estar na reunião, avisando
     com antecedência em caso de imprevisto. Tolere os atrasos não mais que o
     tempo hábil da reunião sem prejudicar sua qualidade, ou de acordo com
-    sua disponibilidade - sugerindo remarcação em caso de comprometimento.
+    sua disponibilidade - sugerindo remarcação em caso de comprometimento;
 10. Não use Opcional em convites, consulte previamente as pessoas antes de
-    enviar apenas para quem realmente participará da reunião.
+    enviar apenas para quem realmente participará da reunião;
 11. Descreva o assunto da reunião objetivamente e acrescente macro tópicos a serem
     discutidos. Durante a reunião, discuta os tópicos planejados e mantenha
-    a discussão no contexto do assunto estabelecido.
+    a discussão no contexto do assunto estabelecido;
 12. Para reuniões com equipe, apenas agende a reunião sem necessidade de perguntar
-    sobre a disponibilidade, que está publicada na agenda de cada pessoa.
+    sobre a disponibilidade, que está publicada na agenda de cada pessoa;
 13. Mesmo para reuniões em equipe planeje com antecedência os horários, certificando-se
-    de não enviar convites para reuniões no mesmo dia ou com menos ao menos 48h de antecedência.
+    de não enviar convites para reuniões no mesmo dia ou com menos ao menos 48h de antecedência;
+14. Caso o cliente se atrase, ligue por telefone para saber se estão com alguma dificuldade para ingressar em salas virtuais ou na portaria do estabelecimento.
     
 Notas:
 	Inscrever-se em: https://calendar.help
