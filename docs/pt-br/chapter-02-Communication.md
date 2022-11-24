@@ -251,5 +251,5 @@ considerado como aceito por todos.
 5.6 Tarefas e Autogestão
 --------------------
 
-1. Dê total crédito ao que foi escrito na tarefa e a corporação ganha na cultura da auto-confiança. Salvo o texto incompleto do que fazer. Mas com o mínimo de informação, se for possível construir uma primeira versão daquilo que foi entendido, vale mais entregar uma preliminar e discutir já com esta entrega, do que perguntar antes de iniciar.
+1. Dê total crédito ao que foi escrito na tarefa e a corporação ganha na cultura da autoconfiança. Salvo o texto incompleto do que fazer. Mas com o mínimo de informação, se for possível construir uma primeira versão daquilo que foi entendido, vale mais entregar uma preliminar e discutir já com esta entrega, do que perguntar antes de iniciar.
 
