@@ -248,5 +248,8 @@ considerado como aceito por todos.
 2.  É possível usar um programa como o WinSCP para acessar o FTPS e realizar a
     carga dos arquivos via SFTP.
 
+5.6 Tarefas e Autogestão
+--------------------
 
+1. Dê total crédito ao que foi escrito na tarefa e a corporação ganha na cultura da auto-confiança. Salvo o texto incompleto do que fazer. Mas com o mínimo de informação, se for possível construir uma primeira versão daquilo que foi entendido, vale mais entregar uma preliminar e discutir já com esta entrega, do que perguntar antes de iniciar.
 
