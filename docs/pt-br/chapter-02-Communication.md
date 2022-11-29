@@ -68,6 +68,8 @@ Licensed under the MIT license
     não é necessário responder ao e-mail original, já que a pessoa já estará ciente pelo convite recebido.
 14. Mantenha a linha de e-mail inalterada ao responder, optando por duplicar o conteúdo e realizar
     as inserções na mensagem sendo composta.
+15. Apenas trate no E-mail o assunto que está especificado no campo assunto. Outras questões devem ser tratadas em um novo E-mail.
+16. Ao mencionar locais virtuais ou físicos, forneça a URL ou endereço correspondentes.
 
 ### Reserva de Local de Trabalho
 
