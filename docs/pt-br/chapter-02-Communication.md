@@ -88,7 +88,9 @@ Nota: Remova todas as ofertas padrão do seu dispositivo como 'Obter Programa pa
     em todos os convites enviados a cliente;
 
 2.  Ofereça sugestões de data e horário no fuso horário da pessoa convidada
-    dentro da primeira sentença do convite;
+    dentro da primeira sentença do convite, mantendo as sugestões dias sem ultrapassar
+    mais de uma semana à frente em duração, por exeplo: Ter, Qui e Seg (ultrapassando 
+    o final de semana) ou Seg, Qui e Sex (na mesma semana);
 
 3.  Enumere uma lista de datas adicionais de modo a facilitar o agendamento de
     quem está lendo o e-mail de compromisso possa decidir com mais facilidade;
