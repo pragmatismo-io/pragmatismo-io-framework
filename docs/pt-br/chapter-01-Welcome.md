@@ -6,7 +6,9 @@ positivo em nossas atividades, que possa ser generalizado, enviar e-mail para
 metodologia\@pragmatismo.io para avaliação. Este documento visa permitir
 inclusão rápida em várias faculdades necessárias para o dia a dia e 
 multiplicação de conhecimento, além de difundir boas práticas de construção 
-de projetos de tecnologia.
+de projetos de tecnologia. Opte sempre por descentralizar o conhecimento 
+"Descentralizar o know-how" editando estes artigos e compartilhando os métodos
+de trabalhos mais saudáveis e eficázes.
 
 1.1 Normas Gerais
 -----------------
