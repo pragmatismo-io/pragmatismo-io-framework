@@ -49,7 +49,7 @@ export class AzureSearch {
     this.searchIndexer = searchIndexer;
     this.client = require("azure-search")({
       url: "https://" + searchHost,
-      key: searchKey
+      key: searchKey,
     });
   }
 
@@ -60,7 +60,7 @@ export class AzureSearch {
         {
           search: queryText,
           queryType: "simple",
-          searchMode: "any"
+          searchMode: "any",
         },
         (err, results) => {
           if (err) {
@@ -75,11 +75,11 @@ export class AzureSearch {
 
   deleteIndex() {
     return new Promise((resolve: any, reject: any): any => {
-      this.client.deleteIndex(this.searchIndex, err => {
+      this.client.deleteIndex(this.searchIndex, (err) => {
         if (err) {
           reject(err);
         } else {
-          this.client.deleteIndexer(this.searchIndexer, err => {
+          this.client.deleteIndexer(this.searchIndexer, (err) => {
             if (err) {
               reject(err);
             } else {
@@ -93,7 +93,7 @@ export class AzureSearch {
 
   deleteDataSource(name: string) {
     return new Promise((resolve: any, reject: any): any => {
-      this.client.deleteDataSource(name, err => {
+      this.client.deleteDataSource(name, (err) => {
         if (err) {
           reject(err);
         } else {
@@ -119,11 +119,11 @@ export class AzureSearch {
       description: description,
       type: dsType,
       credentials: { connectionString: connectionString },
-      container: { name: tableName }
+      container: { name: tableName },
     };
 
     return new Promise((resolve: any, reject: any): any => {
-      this.client.createDataSource(ds, err => {
+      this.client.createDataSource(ds, (err) => {
         if (err) {
           reject(err);
         } else {
@@ -149,11 +149,11 @@ export class AzureSearch {
               maxFailedItems: 10,
               maxFailedItemsPerBatch: 5,
               base64EncodeKeys: false,
-              batchSize: 500
-            }
+              batchSize: 500,
+            },
           };
 
-          this.client.createIndexer(schemaIndexer, function(err, results) {
+          this.client.createIndexer(schemaIndexer, function (err, results) {
             if (err) {
               reject(err);
             } else {
@@ -161,6 +161,19 @@ export class AzureSearch {
             }
           });
         }
+      });
+    });
+  }
+
+  /** run indexer over an index in Azure search. */
+  rebuildIndex(indexerName) {
+    let _this_ = this;
+    return new Promise((resolve: any, reject: any): any => {
+      this.client.runIndexer(indexerName, (err) => {
+        if (err) {
+          reject(err);
+        }
+        resolve();
       });
     });
   }
