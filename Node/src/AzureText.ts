@@ -43,72 +43,62 @@ export class AzureText {
   static async getSpelledText(key: string, text: string): Promise<string> {
     return new Promise<string>((resolve, reject) => {
       let https = require("https");
-
-      let host = "api.cognitive.microsoft.com";
-      let path = "/bing/v7.0/spellcheck";
-
+      let host = "api.bing.microsoft.com";
+      let path = "/v7.0/spellcheck";
       let mkt = "pt-PT";
       let mode = "spell";
       let query_string = "?mkt=" + mkt + "&mode=" + mode;
-
       let request_params = {
-        method: "POST",
-        hostname: host,
-        path: path + query_string,
-        headers: {
-          "Content-Type": "application/x-www-form-urlencoded",
-          "Content-Length": text.length + 5,
-          "Ocp-Apim-Subscription-Key": key
-        }
+          method: "POST",
+          hostname: host,
+          path: path + query_string,
+          headers: {
+              "Content-Type": "application/x-www-form-urlencoded",
+              "Content-Length": text.length + 5,
+              "Ocp-Apim-Subscription-Key": key
+          }
       };
-
-      let getCorrectedText = (sourceText: string, response: any) => {
-        let getWordIndexByWordOffsetInText = function(text, wordOffsetInText) {
+      let getCorrectedText = (sourceText, response) => {
+          let getWordIndexByWordOffsetInText = function (text, wordOffsetInText) {
+              let index = 0;
+              let currentWordIndex = 0;
+              text = text.split(" ");
+              text.forEach(element => {
+                  if (index >= wordOffsetInText) {
+                      return false;
+                  }
+                  index += element.length + 1;
+                  currentWordIndex++;
+              });
+              return currentWordIndex;
+          };
+          let replaceWordAtIndex = function (text, index, replacement) {
+              text = text.split(" ");
+              text[index] = replacement;
+              text = text.join(" ");
+              return text;
+          };
           let index = 0;
-          let currentWordIndex = 0;
-          text = text.split(" ");
-          text.forEach(element => {
-            if (index >= wordOffsetInText) {
-              return false;
-            }
-            index += element.length + 1;
-            currentWordIndex++;
-          });
-          return currentWordIndex;
-        };
-        let replaceWordAtIndex = function(text, index, replacement) {
-          text = text.split(" ");
-          text[index] = replacement;
-          text = text.join(" ");
-          return text;
-        };
-
-        let index = 0;
-        if (response.flaggedTokens) {
-          response.flaggedTokens.forEach(element => {
-            index = getWordIndexByWordOffsetInText(sourceText, element.offset);
-            sourceText = replaceWordAtIndex(
-              sourceText,
-              index,
-              element.suggestions[0].suggestion
-            );
-            index++;
-          });
-        }
-        return sourceText;
+          if (response.flaggedTokens) {
+              response.flaggedTokens.forEach(element => {
+                  index = getWordIndexByWordOffsetInText(sourceText, element.offset);
+                  sourceText = replaceWordAtIndex(sourceText, index, element.suggestions[0].suggestion);
+                  index++;
+              });
+          }
+          return sourceText;
       };
-
       let response_handler = response => {
-        let body = "";
-        response.on("data", d => {
-          body += d;
-        });
-        response.on("end", () => {
-          resolve(getCorrectedText(text, JSON.parse(body)));
-        });
-        response.on("error", e => {
-          reject(`Error calling Spelling API: ${e}`);
-        });
+          let body = "";
+          response.on("data", d => {
+              body += d;
+          });
+          response.on("end", () => {
+              resolve(getCorrectedText(text, JSON.parse(body)));
+          });
+          response.on("error", e => {
+              reject(`Error calling Spelling API: ${e}`);
+          });
       };
       let req = https.request(request_params, response_handler);
       req.write("text=" + text);
