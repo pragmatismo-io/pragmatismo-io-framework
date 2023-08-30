@@ -32,7 +32,7 @@ Licensed under the MIT license
 4.  Opte por rascunhar informações diretamente na ferramentas associadas como por exemplo o Team Services, trafegando apenas o hyperlink do item em questão já criado na ferramenta;
 5.  O campo Para e Cc devem ser usados com critério, estando no Para apenas as pessoas que precisam tomar alguma ação com o e-mail, primariamente. Os destinatários que estão apenas acompanhando a linha de e-mail devem ser inseridos no campo Cc;
 6.  Não encaminhe e-mails internos diretamente para cliente, opte por reatar a linha de e-mail correspondente ao assunto para responder, ou iniciar uma nova conversa;
-7.  Opte por agradecer a pessoa antecipadamente ou quando encontrá-la pessoalmente a enviar um e-mail de 'obrigado' apenas. Dentro de uma filosofia de caixa de entrada  vazia, e-mails são documentos processados em sequência e itens desta natureza podem fazer crescer consideravelmente a quantidade de trabalho;
+7.  Opte por agradecer a pessoa antecipadamente ou quando encontrá-la pessoalmente a enviar um e-mail de 'obrigado' apenas. Dentro de uma *filosofia de caixa de entrada vazia*, e-mails são documentos processados em sequência e itens desta natureza podem fazer crescer consideravelmente a quantidade de trabalho;
 8.  Apenas defina o e-mail com Alta Prioridade (Ícone de Exclamação) se for realmente um caso de urgência;
 9.  Ao realizar perguntas opte por usar apenas um ponto de interrogação, que já evidencia questionamento;
 10. Ao comentar sobre a execução de uma atividade em andamento, envie um prazo estimado de conclusão, minimizando a chance da questão precisar ser formulada;
