@@ -32,7 +32,7 @@
 | Storyboard creator 						| https://www.storyboardthat.com/storyboard-creator 								 |
 | Wapplyzer									| https://wappalyzer.com/ 															 |
 | Snip Insights								| https://github.com/Microsoft/ailab/releases/tag/1.0.0.0 							 |
-
+| Security repository | https://cybersectools.com/ | 
 
 |Ferramentas| Description |
 |-------------|------------|
