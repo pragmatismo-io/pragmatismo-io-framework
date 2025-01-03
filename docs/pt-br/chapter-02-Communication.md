@@ -9,16 +9,17 @@ Licensed under the MIT license
 ### 5.1.1. Definições gerais.
 
 1. Nomeie arquivos, itens, documentos, elementos com os nomes completos e capitalizados;
-2. Inicie a frase com maiúsculas e escreva as palavras por inteiro;
-3. Leia sobre a comunicação do código de conduta: https://github.com/GeneralBots/BotServer/blob/master/CODE_OF_CONDUCT.md;
-4. OK maiúsculo é mais fácil para visualizar o aceite;
-5. Ao realizar a colagem de conteúdo verifique se uma ferramenta corporativa pode ser usada para armazenar já no local correto e mande apenas o endereço na conversação;
-6. Ao escrever uma lista de itens, termine cada item com um ponto e vírgula. Termine com um ponto final no último item. Exemplo:
+2. Opte por textos disertativos ante textos em primeira pessoa facilitando a colaboração do conteúdo;
+3. Inicie a frase com maiúsculas e escreva as palavras por inteiro;
+4. Leia sobre a comunicação do código de conduta: https://github.com/GeneralBots/BotServer/blob/master/CODE_OF_CONDUCT.md;
+5. OK maiúsculo é mais fácil para visualizar o aceite;
+6. Ao realizar a colagem de conteúdo verifique se uma ferramenta corporativa pode ser usada para armazenar já no local correto e mande apenas o endereço na conversação;
+7. Ao escrever uma lista de itens, termine cada item com um ponto e vírgula. Termine com um ponto final no último item. Exemplo:
 	- 3ª feira (06/07) às 11h;
 	- 4ª feira (07/07) às 11h;
 	- 5ª feira (08/07) às 16h.
-7. Numere a lista se facilitar a indexação ou evidência de ordem;
-8. Opte por inputar a informação diretamente no sistema associado (ex.: XRM, HR, ALM, etc) e não em aplicativos de notas (OneNote, Joplin, etc).
+8. Numere a lista se facilitar a indexação ou evidência de ordem;
+9. Opte por inputar a informação diretamente no sistema associado (ex.: XRM, HR, ALM, etc) e não em aplicativos de notas (OneNote, Joplin, etc).
 
 5.2. E-mails
 ------------
